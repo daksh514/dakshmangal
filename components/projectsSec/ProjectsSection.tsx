@@ -8,7 +8,7 @@ import Link from "next/link";
 
 function ProjectsSection() {
   return (
-    <div id="projects" className="mt-8 mb-20">
+    <div id="projects" className="mt-8 ">
       <div>
         <h1 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
           My Projects
