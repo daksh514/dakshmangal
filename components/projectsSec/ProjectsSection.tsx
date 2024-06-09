@@ -32,7 +32,7 @@ function ProjectsSection() {
                   FeedGrasp
                 </h1>
                 <p className="max-sm:text-sm">
-                  FeedGrasp is one of my most recent projects, It's a SaaS app
+                  FeedGrasp is one of my most recent projects, Its a SaaS app
                   where which helps you collect feedbacks of people!
                 </p>
               </CardHeader>
@@ -62,7 +62,7 @@ function ProjectsSection() {
                   PassVault
                 </h1>
                 <p className="max-sm:text-sm">
-                  PassVault is one of my first NextJs projects, It's an app where you can save your passwords so you dond forget them.
+                  PassVault is one of my first NextJs projects, Its an app where you can save your passwords so you dond forget them.
                 </p>
               </CardHeader>
               <CardContent>
