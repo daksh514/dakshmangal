@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dakshmangal.vercel.app"),
   title: "Daksh Mangal - Portfolio",
   description: "Hi, this is the portfolio of a teen web developer, Daksh Mangal",
   keywords: "daksh mangal, daksh mangal portfolio, daksh mangal web developer, daksh mangal web developer portfolio, daksh mangal portfolio website, daksh mangal web developer portfolio website, daksh mangal portfolio website design, daksh mangal portfolio website design, daksh mangal portfolio design, daksh mangal portfolio design, daksh",

@@ -23,7 +23,7 @@ function AboutSection() {
         </p>
       </div>
       <div>
-        <Card className="bg-muted/10 mt-8 mb-20">
+        <Card className="bg-muted/10 mt-8 ">
           <CardHeader>
             <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
               Skills I Know

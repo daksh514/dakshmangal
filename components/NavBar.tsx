@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { ModeToggle } from "./ThemeBtn";
 import { navLinks } from "@/utils/navLinks";
 import {
@@ -21,10 +21,13 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "./ui/sheet";
+import { X } from "lucide-react";
+
 
 // import {  Github } from "lucide-react";
 
 function NavBar() {
+  const [isSheetOpen, setisSheetOpen] = useState(false);
   return (
     <div className="flex justify-between py-2 items-center  ">
       <div className="max-md:hidden">
@@ -46,19 +49,27 @@ function NavBar() {
       {/* MOBILE NAV */}
 
       <div className="md:hidden">
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button variant="ghost" size="icon">
+        <Sheet open={isSheetOpen}>
+          
+            <Button variant="ghost" size="icon" onClick={()=>setisSheetOpen(true)}>
               <GiHamburgerMenu className="h-[1.2rem] w-[1.2rem]" />
             </Button>
-          </SheetTrigger>
+
+            
+          
           <SheetContent className="">
+         
+            <Button variant={"outline"} className="absolute right-4" onClick={()=>setisSheetOpen(false)}>
+              <X className="w-4 h-auto"/>
+
+            </Button>
+           
         
-              <NavigationMenu className="mx-auto mt-10">
+              <NavigationMenu className="mx-auto mt-16">
                 <NavigationMenuList className="flex flex-col justify-center items-center w-full gap-2 ">
                   {navLinks.map((link) => (
-                    <NavigationMenuItem key={link.label} className="w-full text-center">
-                      <Link href={link.href} legacyBehavior passHref className="w-full text-center">
+                    <NavigationMenuItem key={link.label} className="w-full text-center" onClick={()=>setisSheetOpen(false)}>
+                      <Link href={link.href} legacyBehavior passHref className="w-full text-center" >
                         <NavigationMenuLink className={navigationMenuTriggerStyle() } >
                           {link.label}
                         </NavigationMenuLink>
