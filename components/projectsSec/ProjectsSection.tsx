@@ -21,9 +21,10 @@ function ProjectsSection() {
       </div>
       <div>
         <Tabs defaultValue="feedGrasp" className="mt-5">
-          <TabsList className="grid w-full grid-cols-2">
+          <TabsList className="grid w-full grid-cols-2 h-auto md:grid-cols-3 ">
             <TabsTrigger value="feedGrasp">FeedGrasp</TabsTrigger>
             <TabsTrigger value="password">PassVault</TabsTrigger>
+            <TabsTrigger value="ranCom" >RanCom</TabsTrigger>
           </TabsList>
           <TabsContent value="feedGrasp">
             <Card className="mt-2">
@@ -69,6 +70,35 @@ function ProjectsSection() {
                 <figure className="aspect-video  w-full   relative rounded-lg">
                   <Image
                     src={"/PassVault.png"}
+                    alt="FeedGrasp"
+                    fill
+                    className="rounded-lg h-auto"
+                  />
+                </figure>
+              </CardContent>
+              <CardFooter>
+                <Button className="w-full">
+                    <Link href={'https://passvault-next-gztl.vercel.app'} target="_blank">
+                    Visit Website
+                    </Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          </TabsContent>
+          <TabsContent value="ranCom">
+            <Card className="mt-2">
+              <CardHeader>
+                <h1 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+                  Rancom
+                </h1>
+                <p className="max-sm:text-sm">
+                  Rancom is a little project where you can enter a youtube video link and find one random comment, I made that because I wanted to play with youtube api!
+                </p>
+              </CardHeader>
+              <CardContent>
+                <figure className="aspect-video  w-full   relative rounded-lg">
+                  <Image
+                    src={"/RanCom.png"}
                     alt="FeedGrasp"
                     fill
                     className="rounded-lg h-auto"
